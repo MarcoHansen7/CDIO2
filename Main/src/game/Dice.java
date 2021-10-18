@@ -1,3 +1,4 @@
+package game;
 import java.util.Scanner;
 
 public class Dice {
@@ -13,7 +14,7 @@ public class Dice {
 
             }
             while(!isValid(sidesMax));
-            System.out.println("Du slog " + dice);
+            System.out.println("Du slog " + dice); return dice;
         }
 
         static boolean isValid(int sidesMax){
@@ -22,6 +23,7 @@ public class Dice {
                 return false;
             }  else return true;
         }
+
 
     }
 

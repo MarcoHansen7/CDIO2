@@ -17,13 +17,13 @@ public void add(int amt){
 
 }
 
-class Deposit{
-    int amt=0;
+/*class Deposit{
+   int amt=0;
     public int userInput()
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the amount to be deposited: ");
+       System.out.println("Enter the amount to be deposited: ");
         amt = scanner.nextInt();
     }
-    return amt;
+    return amt; /*
 }

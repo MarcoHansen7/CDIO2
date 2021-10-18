@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Dice {
 
         public static void main(String[] args) {
-            int sidesMax, dice, sidesMin;
+            public int sidesMax, dice, sidesMin;
             sidesMin = 1;
             Scanner sc = new Scanner(System.in);
             do {

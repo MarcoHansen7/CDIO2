@@ -17,7 +17,6 @@ public class Dice {
 
         static boolean isValid(int sidesMax){
             if(sidesMax == 0 || sidesMax < 0){
-                System.out.println("Dette er ikke en reel værdi på en terning, tast en ny )" );
                 return false;
             }  else return true;
         }

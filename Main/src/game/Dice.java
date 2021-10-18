@@ -14,7 +14,7 @@ public class Dice {
 
             }
             while(!isValid(sidesMax));
-            System.out.println("Du slog " + dice); return dice;
+            System.out.println("Du slog " + dice);
         }
 
         static boolean isValid(int sidesMax){

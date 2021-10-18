@@ -4,7 +4,7 @@ public class Dice {
 
         public static void main(String[] args) {
             int sidesMax, dice, sidesMin;
-            sidesMin = 0;
+            sidesMin = 1;
             Scanner sc = new Scanner(System.in);
             do {
                 System.out.println("Indtast antal sider på terning (OBS spillet fungerer kun optimalt med 6 sider): ");
@@ -12,12 +12,12 @@ public class Dice {
                 dice = (int) Math.floor(Math.random() * (sidesMax - sidesMin + 1) + sidesMin);
 
             }
-            while(!isValid(dice));
+            while(!isValid(sidesMax));
             System.out.println("Du slog " + dice);
         }
 
-        static boolean isValid(int dice){
-            if(dice == 0 || dice < 0){
+        static boolean isValid(int sidesMax){
+            if(sidesMax == 0 || sidesMax < 0){
                 System.out.println("Dette er ikke en reel værdi på en terning, tast en ny )" );
                 return false;
             }  else return true;

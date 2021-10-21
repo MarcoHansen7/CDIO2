@@ -1,27 +1,30 @@
 package game;
-import java.util.Scanner;
 
 public class Dice {
 
-        public int Dice(){
-            int sidesMax, dice, sidesMin;
-            sidesMin = 1;
-            sidesMax = 6;
-            Scanner sc = new Scanner(System.in);
-            do {
-                dice = (int) Math.floor(Math.random() * (sidesMax - sidesMin + 1) + sidesMin);
-            }
-            while(!isValid(sidesMax));
-            return dice;
-        }
+    private int numOfSides;
+    private int faceValue;
 
-        static boolean isValid(int sidesMax){
-            if(sidesMax == 0 || sidesMax < 0){
-                return false;
-            }  else return true;
-        }
+    public Dice(int numberOfSides)
+    {
+        numOfSides = numberOfSides;
 
+        faceValue = (int)(Math.random()*numOfSides) + 1;
+
+    } // contructor slutter
+
+    public void roll() // Simulation af terninge-slaget
+    {
+        faceValue = (int)(Math.random()*numOfSides) + 1;
 
     }
+
+    public int getFaceValue() // Returnere værdien af dice
+    {
+        return faceValue;
+    }
+}
+
+
 
 

@@ -5,7 +5,7 @@ public class Cup {
     Dice dice1 = new Dice(6);
     Dice dice2 = new Dice(6);
 
-    public Cup() {
+    public Cup() { // Der gøres her brug af roll() metoden fra Dice.java
         dice1.roll();
         dice2.roll();
     }

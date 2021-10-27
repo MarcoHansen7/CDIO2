@@ -9,8 +9,8 @@ public class Bank {
     public Bank(int i) {
     }
 
-    public int getBalance(){
-        return amount;
+    public String toString(){
+        return("("+amount+")");
     }
     public void add(int amt){
         amount = amount + amt;

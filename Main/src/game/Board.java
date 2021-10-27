@@ -14,7 +14,7 @@ public class Board {
         properties[7] = new Properties(0, "Monastery", "You arrived at the Monastery, nothing happened, its not that Scary.");
         properties[8] = new Properties(-70, "Black Cave", "You saw the Black Cave, go buy a plaster, you cut yourself when trying to Shave.");
         properties[9] = new Properties(+60, "Huts in the Mountain", "You arrived at the Huts in the Mountain, you found some money in the Fountain");
-        properties[10] = new Properties(-80, "The Werewall", "You got to the werewolf wall, you heard a haul, you made a withdrawl, try again ;)!");
+        properties[10] = new Properties(-80, "The Werewall", "You got to the werewolf wall, you heard a haul, you made a withdrawal, try again ;)!");
         properties[11] = new Properties(-50, "The Pit", "Oh Shit, You fell in the Pit.");
         properties[12] = new Properties(+650, "Goldmine", "Jackpot, You hit the Goldmine, now its Showtime.");
     }

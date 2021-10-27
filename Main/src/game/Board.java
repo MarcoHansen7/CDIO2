@@ -1,7 +1,6 @@
 package game;
 
-public class Board
-{
+public class Board {
 
     Properties [] properties = new Properties[13];
 

@@ -6,7 +6,7 @@ public class Main {
 
     static Player p1 = new Player();
     static Player p2 = new Player();
-    private Main gui = new Main();
+    private GUIController gui = new GUIController();
 
     public static void main(String[] args) {
 
@@ -79,9 +79,6 @@ public class Main {
         gui.addPlayers(new Player[]{p1, p2});
     }
 
-    private void addPlayers(Player[] players) {
-        gui.addPlayers(new Player[]{p1, p2});
-    }
 
 
 }

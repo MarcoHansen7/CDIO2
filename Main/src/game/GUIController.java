@@ -3,6 +3,8 @@ package game;
 import gui_fields.*;
 import gui_main.GUI;
 import java.awt.*;
+import gui_fields.GUI_Field;
+import gui_fields.GUI_Street;
 
 public class GUIController {
 

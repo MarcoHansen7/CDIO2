@@ -39,11 +39,11 @@ public class Language {
 
     }
 
-    public static void Arrived(String n, String d, int e, Bank bank){
+    public static void Arrived(String name, String description, int outcome, Bank bank){
 
-        System.out.println("You landed on: "+n);
-        System.out.println(d);
-        System.out.println("Effect on bank: "+ e);
+        System.out.println("You landed on: "+name);
+        System.out.println(description);
+        System.out.println("Effect on bank: "+ outcome);
         System.out.println("Your bank balance is now: " + bank.amount);
     }
 

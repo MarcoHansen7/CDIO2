@@ -8,24 +8,24 @@ public class Language {
     static Scanner sc = new Scanner(System.in);
 
     public static void Intro(Player p1, Player p2) {
-        System.out.println("Welcome " + p1 + " and " + p2);
+        System.out.println("Welcome " + p1 + " and " + p2 + "to Matador!");
 
     }
 
     public static void Player1InsertName() {
-        System.out.println("Enter your name Player 1: ");
+        System.out.println("Please enter your name Player 1: ");
 
     }
     public static void Player2InsertName() {
-        System.out.println("Enter your name Player 2: ");
+        System.out.println("Please enter your name Player 2: ");
     }
 
     public static void Player1Roll(Player p1) {
-        System.out.println("\n"+p1.PlayerName+", press 1 to roll");
+        System.out.println("\n"+p1.PlayerName+", press 1 on the keyboard if you want to roll");
 
     }
     public static void Player2Roll(Player p2) {
-        System.out.println("\n"+p2.PlayerName+", press 2 to roll");
+        System.out.println("\n"+p2.PlayerName+", press 2 on the keyboard if you want to roll");
 
     }
 
@@ -43,7 +43,7 @@ public class Language {
 
         System.out.println("You landed on: "+name);
         System.out.println(description);
-        System.out.println("Effect on bank: "+ outcome);
+        System.out.println("The effect on your bank-account: "+ outcome);
         System.out.println("Your bank balance is now: " + bank.amount);
     }
 

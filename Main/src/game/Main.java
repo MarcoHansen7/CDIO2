@@ -10,9 +10,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         Main game = new Main();
-        game.setPlayerName();
+        game.PlayerName();
         game.setupPlayer();
 
         while(true){
@@ -39,7 +38,7 @@ public class Main {
 
     //Sets the player name.
 
-    public void setPlayerName(){
+    public void PlayerName(){
 
         Language.Player1InsertName();
         p1.getPlayerName(Language.sc.nextLine());
@@ -55,11 +54,11 @@ public class Main {
 
     public void Player1(){
 
-        Cup c2 = new Cup();
+        Cup c1 = new Cup();
 
-        Language.Player1Rolled(p1, c2);
+        Language.Player1Rolled(p1, c1);
 
-        board.properties[c2.sum()].Arrived(p1);
+        board.properties[c1.sum()].Arrived(p1);
     }
 
 
@@ -68,11 +67,11 @@ public class Main {
 
     public void Player2(){
 
-        Cup c3 = new Cup();
+        Cup c2 = new Cup();
 
-        Language.Player2Rolled(p2, c3);
+        Language.Player2Rolled(p2, c2);
 
-        board.properties[c3.sum()].Arrived(p2);
+        board.properties[c2.sum()].Arrived(p2);
     }
 
     public void setupPlayer() {

@@ -26,7 +26,7 @@ public class GUIController {
         fields[6] = new GUI_Street("Monastery", "0", "You arrived at the Monastery, nothing happened, its not that Scary", "+250", Color.gray, Color.BLACK);
         fields[7] = new GUI_Street("Black Cave", "-70", "You saw the Black Cave, go buy a plaster, you cut yourself when trying to Shave", "+250", Color.black, Color.white);
         fields[8] = new GUI_Street("Huts in the mountain", "+60", "You arrived at the Huts in the Mountain, you found some money in the Fountain", "+250", Color.white, Color.BLACK);
-                fields[9] = new GUI_Street("The Werewall", "-80", "You got to the werewolf wall, you heard a haul, you made a withdrawl, try again", "+250", Color.PINK, Color.BLACK);
+        fields[9] = new GUI_Street("The Werewall", "-80", "You got to the werewolf wall, you heard a haul, you made a withdrawl, try again", "+250", Color.PINK, Color.BLACK);
         fields[10] = new GUI_Street("The pit", "-50", "Oh Shit, You fell in the Pit", "+250", Color.MAGENTA, Color.BLACK);
         fields[11] = new GUI_Street("Goldmine", "+650", "Jackpot, You hit the Goldmine, now its Showtime", "+250", Color.orange, Color.BLACK);
 
@@ -42,7 +42,7 @@ public class GUIController {
     public void addPlayers(Player[] players) {
 
         board.addPlayer(new GUI_Player(players[0].PlayerName, players[0].bank.amount, new GUI_Car(Color.RED, Color.RED, GUI_Car.Type.CAR, GUI_Car.Pattern.FILL)));
-        board.addPlayer(new GUI_Player(players[1].PlayerName, players[1].bank.amount, new GUI_Car(Color.GREEN, Color.GREEN, GUI_Car.Type.CAR, GUI_Car.Pattern.FILL)));
+        board.addPlayer(new GUI_Player(players[1].PlayerName, players[1].bank.amount, new GUI_Car(Color.GREEN, Color.BLUE, GUI_Car.Type.CAR, GUI_Car.Pattern.FILL)));
 
     }
 

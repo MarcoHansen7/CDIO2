@@ -42,7 +42,7 @@ public class GUIController {
     public void addPlayers(Player[] players) {
 
         board.addPlayer(new GUI_Player(players[0].PlayerName, players[0].bank.amount, new GUI_Car(Color.RED, Color.RED, GUI_Car.Type.CAR, GUI_Car.Pattern.FILL)));
-        board.addPlayer(new GUI_Player(players[1].PlayerName, players[1].bank.amount, new GUI_Car(Color.GREEN, Color.BLUE, GUI_Car.Type.CAR, GUI_Car.Pattern.FILL)));
+        board.addPlayer(new GUI_Player(players[1].PlayerName, players[1].bank.amount, new GUI_Car(Color.BLUE, Color.BLUE, GUI_Car.Type.CAR, GUI_Car.Pattern.FILL)));
 
     }
 

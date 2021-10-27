@@ -8,7 +8,7 @@ public class Language {
     static Scanner sc = new Scanner(System.in);
 
     public static void Intro(Player p1, Player p2) {
-        System.out.println("Welcome " + p1 + " and " + p2 + "to Matador!");
+        System.out.println("Welcome " + p1 + " and " + p2 + " to Matador!");
 
     }
 

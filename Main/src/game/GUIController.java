@@ -10,13 +10,9 @@ public class GUIController {
 
     GUI board;
 
-    public GUIController() {
+    public GUIController() { // GUI Field creation
         GUI_Field[] fields = new GUI_Field[12];
 
-        //Dette er så simpelt som det kan blive.
-        //fields[2] = new GUI_Street();
-
-        //Der tilføjes et par værdier.
         fields[0] = new GUI_Street("Start", "Good Luck", "The person to hit 3000 first, wins", "+250", Color.RED, Color.BLACK);
         fields[1] = new GUI_Street("Tower", "+250", "You got the Tower, now make it Shower!", "+250", Color.darkGray, Color.BLACK);
         fields[2] = new GUI_Street("Crater", "-100", "You fell in the Crater, Sorry, See you later", "+250", Color.lightGray, Color.BLACK);
@@ -30,16 +26,12 @@ public class GUIController {
         fields[10] = new GUI_Street("The pit", "-50", "Oh Shit, You fell in the Pit", "+250", Color.MAGENTA, Color.BLACK);
         fields[11] = new GUI_Street("Goldmine", "+650", "Jackpot, You hit the Goldmine, now its Showtime", "+250", Color.orange, Color.BLACK);
 
-        //Der findes andre typer af felter.
-        //fields[3] = new GUI_Shipping();
-
-
         board = new GUI(fields);
 
 
     }
 
-    public void addPlayers(Player[] players) {
+    public void addPlayers(Player[] players) { // Creates the player in the GUI
 
         board.addPlayer(new GUI_Player(players[0].PlayerName, players[0].bank.amount, new GUI_Car(Color.RED, Color.RED, GUI_Car.Type.CAR, GUI_Car.Pattern.FILL)));
         board.addPlayer(new GUI_Player(players[1].PlayerName, players[1].bank.amount, new GUI_Car(Color.BLUE, Color.BLUE, GUI_Car.Type.CAR, GUI_Car.Pattern.FILL)));

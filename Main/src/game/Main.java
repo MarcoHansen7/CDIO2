@@ -14,7 +14,8 @@ public class Main {
         game.PlayerName();
         game.setupPlayer();
 
-        while(true){
+        while(true){ //  infinite loop
+            // uses methods from Language class in correlation with system.out.println
 
             Language.Player1Roll(player1);
             Language.sc.nextInt();

@@ -3,8 +3,8 @@ package game;
 public class Player {
 
 
-    String PlayerName; //Not private, it's being used in ....
-    Bank bank; //Not private, it's being used in ...
+    String PlayerName;
+    Bank bank;
 
     public Player() {// Create constructor, returns nothing
         bank  = new Bank(1000);

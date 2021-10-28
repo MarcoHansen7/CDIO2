@@ -1,9 +1,6 @@
 package game;
 
-import java.util.Scanner;
-
 public class Bank {
-    //Bank b= new Bank();
     int amount;
 
     public Bank(int a) {
@@ -11,9 +8,9 @@ public class Bank {
     }
 
     public String toString(){
-        return("("+amount+")");
+        return("("+amount+")");  //This toString method returns amount as a String-variable
     }
-    public void add(int amt){
+    public void add(int amt){ //This method adds the new amount to the previous amount
         amount = amount + amt;
         System.out.println("Total Balance: " +amount);
 

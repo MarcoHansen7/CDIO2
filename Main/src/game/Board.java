@@ -1,6 +1,6 @@
 package game;
 
-public class Board {
+public class Board { // Creating an Array with every property
 
     Properties [] properties = new Properties[13];
 

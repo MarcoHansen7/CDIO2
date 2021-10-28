@@ -11,15 +11,15 @@ public class Dice {
 
         faceValue = (int)(Math.random()*numOfSides) + 1;
 
-    } // contructor slutter
+    } // Contructor ends
 
-    public void roll() // Simulation af terninge-slaget
+    public void roll() // Simulation af the dice throw
     {
         faceValue = (int)(Math.random()*numOfSides) + 1;
 
     }
 
-    public int getFaceValue() // Returnere værdien af dice
+    public int getFaceValue() // Returns the value of dice
     {
         return faceValue;
     }

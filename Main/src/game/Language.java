@@ -12,6 +12,7 @@ public class Language {
 
     public static void Intro(Player player1, Player player2) {
         System.out.println("Welcome " + player1 + " and " + player2 + " to Matador!");
+        System.out.println("The first player to get 3000, wins. Good luck!");
 
     }
 

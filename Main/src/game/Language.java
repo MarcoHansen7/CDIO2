@@ -7,8 +7,8 @@ public class Language {
     Main game = new Main();
     static Scanner sc = new Scanner(System.in);
 
-    public static void Intro(Player p1, Player p2) {
-        System.out.println("Welcome " + p1 + " and " + p2 + " to Matador!");
+    public static void Intro(Player player1, Player player2) {
+        System.out.println("Welcome " + player1 + " and " + player2 + " to Matador!");
 
     }
 
@@ -20,22 +20,22 @@ public class Language {
         System.out.println("Please enter your name Player 2: ");
     }
 
-    public static void Player1Roll(Player p1) {
-        System.out.println("\n"+p1.PlayerName+", press 1 on the keyboard if you want to roll");
+    public static void Player1Roll(Player player1) {
+        System.out.println("\n"+player1.PlayerName+", press 1 on the keyboard if you want to roll");
 
     }
-    public static void Player2Roll(Player p2) {
-        System.out.println("\n"+p2.PlayerName+", press 2 on the keyboard if you want to roll");
-
-    }
-
-    public static void Player1Rolled(Player p1, Cup c1){
-        System.out.println(p1 + " rolled " + c1.sum());
+    public static void Player2Roll(Player player2) {
+        System.out.println("\n"+player2.PlayerName+", press 2 on the keyboard if you want to roll");
 
     }
 
-    public static void Player2Rolled(Player p2, Cup c2){
-        System.out.println(p2 + " rolled " + c2.sum());
+    public static void Player1Rolled(Player player1, Cup cup1){
+        System.out.println(player1 + " rolled " + cup1.sum());
+
+    }
+
+    public static void Player2Rolled(Player player2, Cup cup2){
+        System.out.println(player2 + " rolled " + cup2.sum());
 
     }
 
@@ -47,8 +47,8 @@ public class Language {
         System.out.println("Your bank balance is now: " + bank.amount);
     }
 
-    public static void PlayerWon(Player p) {
-        System.out.println(p.PlayerName+" WON!");
+    public static void PlayerWon(Player player) {
+        System.out.println(player.PlayerName+" WON!");
 
     }
 

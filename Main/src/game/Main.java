@@ -4,8 +4,8 @@ public class Main {
 
     Board board = new Board();
 
-    static Player p1 = new Player();
-    static Player p2 = new Player();
+    static Player player1 = new Player();
+    static Player player2 = new Player();
     private GUIController gui = new GUIController();
 
     public static void main(String[] args) {
@@ -16,66 +16,68 @@ public class Main {
 
         while(true){
 
-            Language.Player1Roll(p1);
+            Language.Player1Roll(player1);
             Language.sc.nextInt();
             game.Player1();
 
-            if(p1.bank.amount >= 3000){
-                Language.PlayerWon(p1);
+            if(player1.bank.amount >= 3000){
+                Language.PlayerWon(player1);
                 System.exit(0);
             }
 
-            Language.Player2Roll(p2);
+            Language.Player2Roll(player2);
             Language.sc.nextInt();
             game.Player2();
 
-            if(p2.bank.amount >= 3000){
-                Language.PlayerWon(p2);
+            if(player2.bank.amount >= 3000){
+                Language.PlayerWon(player2);
                 System.exit(0);
             }
         }
     }
 
-    //Sets the player name.
+    //Player name.
 
     public void PlayerName(){
 
         Language.Player1InsertName();
-        p1.getPlayerName(Language.sc.nextLine());
+        player1.getPlayerName(Language.sc.nextLine());
 
         Language.Player2InsertName();
-        p2.getPlayerName(Language.sc.nextLine());
+        player2.getPlayerName(Language.sc.nextLine());
 
-        Language.Intro(p1, p2);
+        Language.Intro(player1, player2);
 
     }
 
-    //Starts player turn
+    //Player1 turn
 
     public void Player1(){
 
-        Cup c1 = new Cup();
+        Cup cup1 = new Cup();
 
-        Language.Player1Rolled(p1, c1);
+        Language.Player1Rolled(player1, cup1);
 
-        board.properties[c1.sum()].Arrived(p1);
+        board.properties[cup1.sum()].Arrived(player1);
     }
 
 
 
-    //Starts player turn
+    //Player2 turn
 
     public void Player2(){
 
-        Cup c2 = new Cup();
+        Cup cup2 = new Cup();
 
-        Language.Player2Rolled(p2, c2);
+        Language.Player2Rolled(player2, cup2);
 
-        board.properties[c2.sum()].Arrived(p2);
+        board.properties[cup2.sum()].Arrived(player2);
     }
 
+    //Inserts the player-figures in the gui
+
     public void setupPlayer() {
-        gui.addPlayers(new Player[]{p1, p2});
+        gui.addPlayers(new Player[]{player1, player2});
     }
 
 

@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class Bank {
     //Bank b= new Bank();
-    int amount = 1000;
+    int amount;
 
-    public Bank(int i) {
+    public Bank(int a) {
+        amount = a;
     }
 
     public String toString(){

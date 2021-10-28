@@ -15,7 +15,7 @@ public class CupTest {
         Cup cup = new Cup();
         int result = cup.sum();
         if (result > 12 || result < 2) {
-            fail("The dice is not limited ");
+            fail("The dice has not been limited ");
         }
 
     }

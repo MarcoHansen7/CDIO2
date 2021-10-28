@@ -13,11 +13,11 @@ public class BankTest {
      */
     @Test
     public void testingToStringMethod() {
-        System.out.println("toString");
         Bank amount = new Bank(1000);
         String expectingResult = "(1000)";
         String actualResult = amount.toString();
         assertEquals(expectingResult, actualResult);
+        System.out.println(amount);
     }
 
     /**

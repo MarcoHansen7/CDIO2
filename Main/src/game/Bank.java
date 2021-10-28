@@ -1,7 +1,7 @@
 package game;
 
 public class Bank {
-    int amount;
+    public int amount;
 
     public Bank(int a) {
         amount = a;

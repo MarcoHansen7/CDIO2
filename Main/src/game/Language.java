@@ -48,7 +48,13 @@ public class Language {
         System.out.println("You landed on: "+name);
         System.out.println(description);
         System.out.println("The effect on your bank-account: "+ outcome);
-        System.out.println("\n"+TEXT_RED +"Your bank balance is now: " + bank.amount+ TEXT_RESET);
+        if (bank.amount < 0) {
+            bank.amount = 0;
+            System.out.println("\n"+TEXT_RED +"Your bank balance is now: " + bank.amount+ TEXT_RESET);
+        }
+        else {
+            System.out.println("\n" + TEXT_RED + "Your bank balance is now: " + bank.amount + TEXT_RESET);
+        }
     }
 
     public static void PlayerWon(Player player) {

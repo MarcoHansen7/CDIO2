@@ -1,6 +1,8 @@
 package testing;
 import org.junit.Test;
 import game.Bank;
+import game.Language;
+
 
 import static org.junit.Assert.*;
 
@@ -30,6 +32,22 @@ public class BankTest {
         Bank amount = new Bank(0);
         amount.add(number);
 
+    }
+
+    /**
+     * Testing the methodArrived & Bank, the amount/balance cant be negative - no matter what the withdrawal is
+     */
+    @Test
+    public void TestingArrived(){
+        int amount = -6000;
+        System.out.println("The effect on your bank-account: "+ amount);
+        if (amount < 0) {
+            amount = 0;
+            System.out.println("\n"+"Your bank balance is now: " + amount);
+        }
+        else {
+            System.out.println("\n"+"Your bank balance is now: " + amount);
+        }
     }
 
 }

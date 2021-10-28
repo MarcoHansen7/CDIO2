@@ -6,6 +6,9 @@ public class Language {
 
     Main game = new Main();
     static Scanner sc = new Scanner(System.in);
+    public static final String TEXT_RED = "\u001B[31m";
+    public static final String TEXT_RESET = "\u001B[0m";
+    public static final String TEXT_CYAN = "\u001B[36m";
 
     public static void Intro(Player player1, Player player2) {
         System.out.println("Welcome " + player1 + " and " + player2 + " to Matador!");
@@ -44,12 +47,11 @@ public class Language {
         System.out.println("You landed on: "+name);
         System.out.println(description);
         System.out.println("The effect on your bank-account: "+ outcome);
-        System.out.println("Your bank balance is now: " + bank.amount);
+        System.out.println("\n"+TEXT_RED +"Your bank balance is now: " + bank.amount+ TEXT_RESET);
     }
 
     public static void PlayerWon(Player player) {
-        System.out.println(player.PlayerName+" WON!");
-
+        System.out.println("\n"+player.PlayerName+TEXT_CYAN+" WON!"+TEXT_RESET);
     }
 
 }

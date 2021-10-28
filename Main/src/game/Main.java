@@ -18,7 +18,7 @@ public class Main {
             // uses methods from Language class in correlation with system.out.println
 
             Language.Player1Roll(player1);
-            Language.sc.nextInt();
+            Language.sc.next();
             game.Player1();
 
             if(player1.bank.amount >= 3000){
@@ -27,7 +27,7 @@ public class Main {
             }
 
             Language.Player2Roll(player2);
-            Language.sc.nextInt();
+            Language.sc.next();
             game.Player2();
 
             if(player2.bank.amount >= 3000){

@@ -24,11 +24,11 @@ public class Language {
     }
 
     public static void Player1Roll(Player player1) {
-        System.out.println("\n"+player1.PlayerName+", press 1 on the keyboard if you want to roll");
+        System.out.println("\n"+player1.PlayerName+", press Any Key + Enter on the keyboard if you want to roll");
 
     }
     public static void Player2Roll(Player player2) {
-        System.out.println("\n"+player2.PlayerName+", press 2 on the keyboard if you want to roll");
+        System.out.println("\n"+player2.PlayerName+", press Any Key + Enter on the keyboard if you want to roll");
 
     }
 

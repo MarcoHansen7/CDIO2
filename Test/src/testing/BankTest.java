@@ -28,10 +28,11 @@ public class BankTest {
     @Test
     public void testingAddMethod() {
         System.out.println("addEffect");
-        int number = 1000;
+        int number = 2000;
         Bank amount = new Bank(0);
-        amount.add(number);
-
+        int expectingResult = 2000;
+        int actualResult = amount.add(number);
+        assertEquals(expectingResult, actualResult);
     }
 
     /**
@@ -40,7 +41,7 @@ public class BankTest {
     @Test
     public void TestingArrived(){
         int amount = -6000;
-        System.out.println("The effect on your bank-account: "+ amount);
+        int expectingResult = 0;
         if (amount < 0) {
             amount = 0;
             System.out.println("\n"+"Your bank balance is now: " + amount);
@@ -48,6 +49,9 @@ public class BankTest {
         else {
             System.out.println("\n"+"Your bank balance is now: " + amount);
         }
+        int actualResult = amount;
+        assertEquals(expectingResult, actualResult);
+
     }
 
 }

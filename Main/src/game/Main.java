@@ -57,11 +57,20 @@ public class Main {
 
         Cup cup1 = new Cup();
 
+        cup1.rolling();
+
         Language.Player1Rolled(player1, cup1);
 
-        board.properties[cup1.sum()].Arrived(player1);
-    }
+        Properties LandOn = board.properties[cup1.sum()];
+        LandOn.Arrived(player1);
 
+        if(LandOn == board.properties[10]){
+            cup1.rolling();
+            Language.Player1Rolled(player1, cup1);
+            board.properties[cup1.sum()].Arrived(player1);
+        }
+
+    }
 
 
     //Player2 turn
@@ -69,10 +78,18 @@ public class Main {
     public void Player2(){
 
         Cup cup2 = new Cup();
+        cup2.rolling();
 
         Language.Player2Rolled(player2, cup2);
 
-        board.properties[cup2.sum()].Arrived(player2);
+        Properties LandOn = board.properties[cup2.sum()];
+        LandOn.Arrived(player2);
+
+        if(LandOn == board.properties[10]){
+            cup2.rolling();
+            Language.Player1Rolled(player2, cup2);
+            board.properties[cup2.sum()].Arrived(player2);
+        }
     }
 
     //Inserts the player-figures in the gui

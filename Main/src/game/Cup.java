@@ -6,6 +6,9 @@ public class Cup {
     Dice dice2 = new Dice(6);
 
     public Cup() { // The roll() method from Dice.java is used here
+    }
+
+    public void rolling(){ // The roll() method from Dice.java is used here
         dice1.roll();
         dice2.roll();
     }

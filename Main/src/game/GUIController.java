@@ -28,7 +28,6 @@ public class GUIController {
 
         board = new GUI(fields);
 
-
     }
 
     public void addPlayers(Player[] players) { // Creates the player in the GUI
@@ -37,6 +36,10 @@ public class GUIController {
         board.addPlayer(new GUI_Player(players[1].PlayerName, players[1].bank.amount, new GUI_Car(Color.BLUE, Color.BLUE, GUI_Car.Type.CAR, GUI_Car.Pattern.FILL)));
 
     }
+
+
+
+
 
 
 }

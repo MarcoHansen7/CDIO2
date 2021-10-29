@@ -1,7 +1,6 @@
 package testing;
 import org.junit.Test;
 import game.Bank;
-import game.Language;
 
 
 import static org.junit.Assert.*;
@@ -9,18 +8,6 @@ import static org.junit.Assert.*;
 public class BankTest {
 
     public BankTest () { }
-
-    /**
-     * Testing the toString method in the the Bank class, the method should return the "amount"
-     */
-    @Test
-    public void testingToStringMethod() {
-        Bank amount = new Bank(1000);
-        String expectingResult = "(1000)";
-        String actualResult = amount.toString();
-        assertEquals(expectingResult, actualResult);
-        System.out.println(amount);
-    }
 
     /**
      * Testing the add-amount method in the Bank class, adding an amount to the overall amount.
@@ -52,6 +39,19 @@ public class BankTest {
         int actualResult = amount;
         assertEquals(expectingResult, actualResult);
 
+    }
+
+    /**
+     * Testing the toString method in the the Bank class, the method should return the "amount"
+     */
+    @Test
+    public void testingToStringMethod() {
+        Bank amount = new Bank(1000);
+        System.out.println("\n");
+        String expectingResult = "(1000)";
+        String actualResult = amount.toString();
+        assertEquals(expectingResult, actualResult);
+        System.out.println(amount);
     }
 
 }

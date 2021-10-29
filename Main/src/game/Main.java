@@ -41,12 +41,11 @@ public class Main {
 
     public void PlayerName() {
 
-        Language.Player1InsertName();
-        player1.getPlayerName(Language.sc.nextLine());
+        player1.setPlayerName( gui.GUIName());
+        //player1.setPlayerName(Language.sc.nextLine());
 
-        Language.Player2InsertName();
-        player2.getPlayerName(Language.sc.nextLine());
-
+        //player2.setPlayerName(Language.sc.nextLine());
+        player2.setPlayerName( gui.GUIName());
         Language.Intro(player1, player2);
 
     }
@@ -58,6 +57,8 @@ public class Main {
         Cup cup = new Cup();
 
         cup.rolling();
+
+        gui.GUIDice(cup);
 
         Language.PlayerRolled(player, cup);
 
@@ -71,6 +72,7 @@ public class Main {
             Language.PlayerRolled(player, cup);
             board.properties[cup.sum()].Arrived(player);
         }
+        gui.GUIBalance(player);
 
     }
 

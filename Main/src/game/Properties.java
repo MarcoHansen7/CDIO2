@@ -1,6 +1,5 @@
 package game;
 
-
 public class Properties {
     // variables
     private int Outcome;

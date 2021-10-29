@@ -42,6 +42,21 @@ public class GUIController {
         player.currentField = fieldId;
     }
 
+    public void GUIBalance(Player player){
+        player.GUIplayer.setBalance(player.bank.amount);
+    }
+
+
+    public void GUIDice(Cup cup){
+        board.setDice(cup.dice1.getFaceValue(), cup.dice2.getFaceValue());
+
+        }
+
+    public String GUIName(){
+        return board.getUserString("Insert your name");
+    }
+
+
 
 
 

@@ -13,7 +13,7 @@ public class Player {
         bank  = new Bank(1000);
     }
 
-    public String getPlayerName(String PlayerName) {// This will be used to get the PlayerName
+    public String setPlayerName(String PlayerName) {// This will be used to get the PlayerName
         this.PlayerName = PlayerName;
         return PlayerName;
     }

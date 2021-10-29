@@ -18,7 +18,7 @@ public class CupTest {
         if (result > 12 || result < 2) {
             fail("The dice has not been limited ");
         }
-        int expectingResult = 0;
+        int expectingResult = 0; //Just to declare a variable which
             if (result >= 2 && result <= 12) {
                 expectingResult = result;
             }

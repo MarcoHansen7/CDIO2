@@ -23,22 +23,13 @@ public class Language {
         System.out.println("Please enter your name Player 2: ");
     }
 
-    public static void Player1Roll(Player player1) {
-        System.out.println("\n"+player1.PlayerName+", press Any Key + Enter on the keyboard if you want to roll");
-
-    }
-    public static void Player2Roll(Player player2) {
-        System.out.println("\n"+player2.PlayerName+", press Any Key + Enter on the keyboard if you want to roll");
+    public static void PlayerRoll(Player player) {
+        System.out.println("\n"+player.PlayerName+", press Any Key + Enter on the keyboard if you want to roll");
 
     }
 
-    public static void Player1Rolled(Player player1, Cup cup1){
-        System.out.println(player1 + " rolled " + cup1.sum());
-
-    }
-
-    public static void Player2Rolled(Player player2, Cup cup2){
-        System.out.println(player2 + " rolled " + cup2.sum());
+    public static void PlayerRolled(Player player, Cup cup){
+        System.out.println(player + " rolled " + cup.sum());
 
     }
 

@@ -7,11 +7,10 @@ import gui_fields.GUI_Field;
 import gui_fields.GUI_Street;
 
 public class GUIController {
-
+    GUI_Field[] fields = new GUI_Field[12];
     GUI board;
 
     public GUIController() { // GUI Field creation
-        GUI_Field[] fields = new GUI_Field[12];
 
         fields[0] = new GUI_Street("Start", "Good Luck", "The person to hit 3000 first, wins", "+250", Color.RED, Color.BLACK);
         fields[1] = new GUI_Street("Tower", "+250", "You got the Tower, now make it Shower!", "+250", Color.darkGray, Color.BLACK);
@@ -20,7 +19,7 @@ public class GUIController {
         fields[4] = new GUI_Street("Cold Desert", "-20", "You are stranded in the Cold Desert, now lost 20 in the Blizzard", "+250", Color.yellow, Color.BLACK);
         fields[5] = new GUI_Street("Walled city", "+180", "You just arrived at Walled City, Splash som cash, go get Litty", "+250", Color.blue, Color.BLACK);
         fields[6] = new GUI_Street("Monastery", "0", "You arrived at the Monastery, nothing happened, its not that Scary", "+250", Color.gray, Color.BLACK);
-        fields[7] = new GUI_Street("Black Cave", "-70", "You saw the Black Cave, go buy a plaster, you cut yourself when trying to Shave", "+250", Color.black, Color.white);
+        fields[7] = new GUI_Street("Black Cave", "-70", "You saw the Black Cave, you cut yourself when trying to Shave", "+250", Color.black, Color.white);
         fields[8] = new GUI_Street("Huts in the mountain", "+60", "You arrived at the Huts in the Mountain, you found some money in the Fountain", "+250", Color.white, Color.BLACK);
         fields[9] = new GUI_Street("The Werewall", "-80", "You got to the werewolf wall, you heard a haul, you made a withdrawl, try again", "+250", Color.PINK, Color.BLACK);
         fields[10] = new GUI_Street("The pit", "-50", "Oh Shit, You fell in the Pit", "+250", Color.MAGENTA, Color.BLACK);
@@ -31,12 +30,17 @@ public class GUIController {
     }
 
     public void addPlayers(Player[] players) { // Creates the player in the GUI
-
-        board.addPlayer(new GUI_Player(players[0].PlayerName, players[0].bank.amount, new GUI_Car(Color.RED, Color.RED, GUI_Car.Type.CAR, GUI_Car.Pattern.FILL)));
-        board.addPlayer(new GUI_Player(players[1].PlayerName, players[1].bank.amount, new GUI_Car(Color.BLUE, Color.BLUE, GUI_Car.Type.CAR, GUI_Car.Pattern.FILL)));
-
+        players[0].GUIplayer = new GUI_Player(players[0].PlayerName, players[0].bank.amount, new GUI_Car(Color.RED, Color.RED, GUI_Car.Type.CAR, GUI_Car.Pattern.FILL));
+        players[1].GUIplayer = new GUI_Player(players[1].PlayerName, players[1].bank.amount, new GUI_Car(Color.BLUE, Color.BLUE, GUI_Car.Type.CAR, GUI_Car.Pattern.FILL));
+        board.addPlayer(players[0].GUIplayer);
+        board.addPlayer(players[1].GUIplayer);
     }
 
+    public void MoveCar(Player player, int fieldId) {
+        fields[player.currentField].setCar(player.GUIplayer, false);
+        fields[fieldId].setCar(player.GUIplayer, true);
+        player.currentField = fieldId;
+    }
 
 
 

@@ -1,10 +1,13 @@
 package game;
 
+import gui_fields.GUI_Player;
+
 public class Player {
 
-
     String PlayerName;
+    GUI_Player GUIplayer;
     Bank bank;
+    int currentField = 0;
 
     public Player() {// Create constructor, returns nothing
         bank  = new Bank(1000);

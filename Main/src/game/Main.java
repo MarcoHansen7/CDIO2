@@ -14,23 +14,23 @@ public class Main {
         game.PlayerName();
         game.setupPlayer();
 
-        while(true){ //  infinite loop
+        while (true) { //  infinite loop
             // uses methods from Language class in correlation with system.out.println
 
-            Language.Player1Roll(player1);
-            Language.sc.next();
-            game.Player1();
+            Language.PlayerRoll(player1);
+            game.gui.board.showMessage("Throw Dice");
+            game.Player(player1);
 
-            if(player1.bank.amount >= 3000){
+            if (player1.bank.amount >= 3000) {
                 Language.PlayerWon(player1);
                 System.exit(0);
             }
 
-            Language.Player2Roll(player2);
-            Language.sc.next();
-            game.Player2();
+            Language.PlayerRoll(player2);
+            game.gui.board.showMessage("Throw Dice");
+            game.Player(player2);
 
-            if(player2.bank.amount >= 3000){
+            if (player2.bank.amount >= 3000) {
                 Language.PlayerWon(player2);
                 System.exit(0);
             }
@@ -39,7 +39,7 @@ public class Main {
 
     //Player name.
 
-    public void PlayerName(){
+    public void PlayerName() {
 
         Language.Player1InsertName();
         player1.getPlayerName(Language.sc.nextLine());
@@ -53,43 +53,25 @@ public class Main {
 
     //Player1 turn
 
-    public void Player1(){
+    public void Player(Player player) {
 
-        Cup cup1 = new Cup();
+        Cup cup = new Cup();
 
-        cup1.rolling();
+        cup.rolling();
 
-        Language.Player1Rolled(player1, cup1);
+        Language.PlayerRolled(player, cup);
 
-        Properties LandOn = board.properties[cup1.sum()];
-        LandOn.Arrived(player1);
+        gui.MoveCar(player,cup.sum()-1);
 
-        if(LandOn == board.properties[10]){
-            cup1.rolling();
-            Language.Player1Rolled(player1, cup1);
-            board.properties[cup1.sum()].Arrived(player1);
+        Properties LandOn = board.properties[cup.sum()];
+        LandOn.Arrived(player);
+
+        if (LandOn == board.properties[10]) {
+            cup.rolling();
+            Language.PlayerRolled(player, cup);
+            board.properties[cup.sum()].Arrived(player);
         }
 
-    }
-
-
-    //Player2 turn
-
-    public void Player2(){
-
-        Cup cup2 = new Cup();
-        cup2.rolling();
-
-        Language.Player2Rolled(player2, cup2);
-
-        Properties LandOn = board.properties[cup2.sum()];
-        LandOn.Arrived(player2);
-
-        if(LandOn == board.properties[10]){
-            cup2.rolling();
-            Language.Player1Rolled(player2, cup2);
-            board.properties[cup2.sum()].Arrived(player2);
-        }
     }
 
     //Inserts the player-figures in the gui
@@ -97,8 +79,5 @@ public class Main {
     public void setupPlayer() {
         gui.addPlayers(new Player[]{player1, player2});
     }
-
-
-
 }
 

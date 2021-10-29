@@ -1,9 +1,8 @@
 package testing;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import game.Bank;
 
-
-import static org.junit.Assert.*;
 
 public class BankTest {
 

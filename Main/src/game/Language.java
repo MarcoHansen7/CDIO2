@@ -61,6 +61,4 @@ public class Language {
         System.out.println("\n"+player.PlayerName+TEXT_CYAN+" WON!"+TEXT_RESET);
     }
 
-    public static void Arrived(String s, String the_werewall, int i) {
-    }
 }

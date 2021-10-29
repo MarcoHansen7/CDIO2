@@ -36,23 +36,23 @@ public class GUIController {
         board.addPlayer(players[1].GUIplayer);
     }
 
-    public void MoveCar(Player player, int fieldId) {
+    public void MoveCar(Player player, int fieldId) { // Makes the players/cars movable in GUI
         fields[player.currentField].setCar(player.GUIplayer, false);
         fields[fieldId].setCar(player.GUIplayer, true);
         player.currentField = fieldId;
     }
 
-    public void GUIBalance(Player player){
+    public void GUIBalance(Player player){ // updates the balance for the players after each dice throw in GUI
         player.GUIplayer.setBalance(player.bank.amount);
     }
 
 
-    public void GUIDice(Cup cup){
+    public void GUIDice(Cup cup){ // creates two dice in GUI
         board.setDice(cup.dice1.getFaceValue(), cup.dice2.getFaceValue());
 
         }
 
-    public String GUIName(){
+    public String GUIName(){ // Makes a Insert your name button in GUI
         return board.getUserString("Insert your name");
     }
 

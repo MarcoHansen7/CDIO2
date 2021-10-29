@@ -50,7 +50,7 @@ public class Main {
 
     }
 
-    //Player1 turn
+    //Player turn
 
     public void Player(Player player) {
 

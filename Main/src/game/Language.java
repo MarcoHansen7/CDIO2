@@ -15,14 +15,6 @@ public class Language {
 
     }
 
-    public static void Player1InsertName() {
-        System.out.println("Please enter your name Player 1: ");
-
-    }
-    public static void Player2InsertName() {
-        System.out.println("Please enter your name Player 2: ");
-    }
-
     public static void PlayerRoll(Player player) {
         System.out.println("\n"+player.PlayerName+", press Any Key + Enter on the keyboard if you want to roll");
 

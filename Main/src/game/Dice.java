@@ -19,7 +19,7 @@ public class Dice {
 
     }
 
-    public int getFaceValue() // Returns the value of dice
+        public int getFaceValue() // Returns the value of dice
     {
         return faceValue;
     }

@@ -22,7 +22,7 @@ public class CupTest {
             if (result >= 2 && result <= 12) {
                 expectingResult = result;
             }
-            int actualResult = result;
+            int actualResult = cup.sum();
             assertEquals(expectingResult, actualResult);
 
         }
